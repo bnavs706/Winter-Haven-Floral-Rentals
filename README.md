@@ -10,3 +10,6 @@ Pieces that clients will be able to choose from will appear under a tab that sta
 Clients are required to pay a down payment once the event is confirmed. The website will implement an automatic emailing system stating the event is confirmed. If the down payment is not received the customer will receive courtesy emails regarding the deadline to pay.
 If the payment is still not received by deadline then booking is automatically cancelled. The vision is to lead customers from the Facebook and Instagram page to the website where all the events are scheduled, planned and processed.
 Payments and storage of payment information could possibly be outsourced to squarespace.
+
+CURRENTLY IN PROGRESS
+Clients will be able to use the arch builder mode. They will be able to play with different options and create a rough mockup of what their arch will look like. You will be able to further modify specifically beyond the arch builder but it will help clients visualize the kind of arch they will be able to have.
