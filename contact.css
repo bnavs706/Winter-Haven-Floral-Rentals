@@ -1,0 +1,292 @@
+/* ========================================
+   CONTACT PAGE
+   ======================================== */
+
+.contact-page {
+    min-height: 100vh;
+    padding: 40px 60px 70px;
+
+    background:
+        linear-gradient(
+            rgba(247, 243, 235, 0.92),
+            rgba(247, 243, 235, 0.92)
+        ),
+        url("images/floral-background.png");
+
+    background-size: cover;
+    background-position: center;
+
+    color: #1a1a1a;
+}
+
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+.contact-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 35px;
+}
+
+.contact-label {
+    margin: 0 0 5px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 5px;
+}
+
+.contact-header h1 {
+    margin: 5px 0 10px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    font-weight: normal;
+}
+
+.contact-intro {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   CONTACT CONTENT
+   ======================================== */
+
+.contact-content {
+    display: flex;
+    align-items: center;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    gap: 60px;
+}
+
+
+/* ========================================
+   LEFT SIDE
+   ======================================== */
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.contact-item p {
+    margin: 0;
+}
+
+.contact-item small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #777;
+}
+
+.contact-icon {
+    display: inline-block;
+
+    width: 35px;
+
+    font-size: 27px;
+    text-align: center;
+}
+
+
+/* QUOTE */
+
+.contact-quote {
+    margin-top: 70px;
+
+    padding-left: 20px;
+
+    border-left: 2px solid #c6a15b;
+
+    color: #b69054;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-style: italic;
+
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   CONTACT FORM
+   ======================================== */
+
+.contact-form {
+    flex: 1.8;
+
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    border-radius: 5px;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* TWO INPUTS NEXT TO EACH OTHER */
+
+.form-row {
+    display: flex;
+
+    gap: 30px;
+}
+
+
+/* INDIVIDUAL INPUT */
+
+.form-group {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* INPUT APPEARANCE */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    box-sizing: border-box;
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #d6d1c8;
+    border-radius: 2px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    color: #222;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+
+/* DATE FIELD */
+
+.half-width {
+    width: calc(50% - 15px);
+}
+
+
+/* MESSAGE BOX */
+
+.form-group textarea {
+    min-height: 90px;
+
+    resize: vertical;
+}
+
+
+/* ========================================
+   SEND BUTTON
+   ======================================== */
+
+.send-button {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+    border-radius: 3px;
+
+    background: #c6a15b;
+
+    color: #111;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    transition: background 0.2s ease;
+}
+
+.send-button:hover {
+    background: #b58e49;
+}
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 800px) {
+
+    .contact-page {
+        padding: 35px 25px;
+    }
+
+    .contact-header h1 {
+        font-size: 36px;
+    }
+
+    .contact-content {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 20px;
+    }
+
+    .contact-info {
+        width: 100%;
+    }
+
+    .contact-form {
+        box-sizing: border-box;
+
+        width: 100%;
+    }
+
+    .form-row {
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+    .half-width {
+        width: 100%;
+    }
+
+    .contact-quote {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}

@@ -374,7 +374,7 @@ nav a.active{
     width: 120px;
     height: 150px;
     top: 10px;
-    right: 50px
+    right: 150px;
 }
 .middle-left {
     width: 120px;
@@ -386,7 +386,7 @@ nav a.active{
     width: 120px;
     height: 150px;
     top: 150px;
-    right: 10px;
+    right: 100px;
 }
 .lower-left {
     width: 120px;
@@ -398,13 +398,20 @@ nav a.active{
     width: 120px;
     height: 150px;
     top: 300px;
-    right: 10px;
+    right: 100px;
 }
 /* RESET BUTTON */
 
 #reset-design {
     margin-top: 30px;
     width: 100%;
+}
+
+
+.flower-image {
+    width: 80px;
+    height: auto;
+    position: absolute;
 }
 
 
@@ -425,3 +432,5 @@ nav a.active{
         width: 80%;
     }
 }
+
+/* Contact Page 
