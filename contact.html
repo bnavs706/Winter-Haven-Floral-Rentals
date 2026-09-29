@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Haven Floral Rentals</title>
+
+    <!-- Main website/navbar CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Contact page CSS -->
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+    <header> 
+
+        <div class="logo"> 
+            <img src="images/logo.png" alt="Haven Floral Rentals"> 
+        </div> 
+ 
+        <nav> 
+            <a href="index.html">Home</a> 
+            <a href="gallery.html">Gallery</a> 
+            <a href="event.html">Event</a> 
+            <a href="about.html">About</a> 
+            <a class="active" href="contact.html">Contact</a> 
+        </nav> 
+
+    </header>
+   
+
+
+    <!-- CONTACT PAGE -->
+    <main class="contact-page">
+
+        <!-- PAGE HEADING -->
+        <section class="contact-header">
+
+            <p class="contact-label">
+                GET IN TOUCH
+            </p>
+
+            <h1>
+                Let's Plan Your Event
+            </h1>
+
+            <p class="contact-intro">
+                We'd love to hear about your vision. Reach out using the form below
+                or through the contact information, and we'll get back to you soon!
+            </p>
+
+        </section>
+
+
+        <!-- CONTACT INFORMATION + FORM -->
+        <section class="contact-content">
+
+
+            <!-- LEFT SIDE -->
+            <div class="contact-info">
+
+                <div class="contact-item">
+
+                    <span class="contact-icon">
+                        ✉
+                    </span>
+
+                    <p>
+                        hello@havenfloralrentals.com
+                    </p>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span class="contact-icon">
+                        ☎
+                    </span>
+
+                    <p>
+                        (123) 456-7890
+                    </p>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span class="contact-icon">
+                        ●
+                    </span>
+
+                    <div>
+
+                        <p>
+                            Winter Haven, FL
+                        </p>
+
+                        <small>
+                            Servicing the surrounding area
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span class="contact-icon">
+                        ◎
+                    </span>
+
+                    <p>
+                        @havenfloralrentals
+                    </p>
+
+                </div>
+
+
+                <p class="contact-quote">
+                    We can't wait<br>
+                    to be a part of your story.
+                </p>
+
+            </div>
+
+
+            <!-- RIGHT SIDE FORM -->
+            <form class="contact-form">
+
+
+                <!-- NAME + EMAIL -->
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Your Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email *
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHONE + EVENT TYPE -->
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="event-type">
+                            Event Type
+                        </label>
+
+                        <select
+                            id="event-type"
+                            name="event-type"
+                        >
+
+                            <option value="wedding">
+                                Wedding
+                            </option>
+
+                            <option value="bridal-shower">
+                                Bridal Shower
+                            </option>
+
+                            <option value="birthday">
+                                Birthday Party
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EVENT DATE -->
+                <div class="form-group half-width">
+
+                    <label for="event-date">
+                        Event Date *
+                    </label>
+
+                    <input
+                        type="date"
+                        id="event-date"
+                        name="event-date"
+                    >
+
+                </div>
+
+
+                <!-- MESSAGE -->
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Tell us about your event..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- BUTTON -->
+                <!-- Not connected to email yet -->
+                <button
+                    type="button"
+                    class="send-button"
+                >
+                    SEND MESSAGE
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
