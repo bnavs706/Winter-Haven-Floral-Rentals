@@ -12,4 +12,10 @@ If the payment is still not received by deadline then booking is automatically c
 Payments and storage of payment information could possibly be outsourced to squarespace.
 
 CURRENTLY IN PROGRESS
-Clients will be able to use the arch builder mode. They will be able to play with different options and create a rough mockup of what their arch will look like. You will be able to further modify specifically beyond the arch builder but it will help clients visualize the kind of arch they will be able to have.
+Clients will be able to use the arch builder mode. They will be able to play with different options and create a rough mockup of what their arch will look like. You will be able to further modify specifically beyond the arch builder but it will help clients visualize the kind of arch they will be able to have. 
+
+ADDITIONAL INFORMATION ABOUT EVENT PAGE
+This section of the page will be organized as such, you will be able to see sample events and select from a series of presets to quickly plan and checkout. If sample events aren't to the customer's desire then that's were the arch builder mode will come in. 
+
+Once the arch is fully customized there will be a review screen showing exactly what the customer ordered along with down payment. Once booked, they see a checkmark with all the information they need. Total cost, selected date and party package(the arch and whatever they added) displayed to them.
+
