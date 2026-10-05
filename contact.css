@@ -290,3 +290,40 @@
         margin-bottom: 40px;
     }
 }
+/* Availability Legend */
+
+.availability-legend {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #d8d2c8;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333333;
+    font-size: 14px;
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.available-dot {
+    background-color: #ffffff;
+    border: 1px solid #555555;
+}
+
+.unavailable-dot {
+    background-color: #aaaaaa;
+}
+
+.selected-dot {
+    background-color: #c6a15b;
+}
