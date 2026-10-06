@@ -1,45 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Availability | Haven Floral Rentals</title>
 
-    <!-- Haven Website CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="availability.css">
 
-    <!-- FullCalendar CSS -->
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/fullcalendar@7.1.0/skeleton.css">
-
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/fullcalendar@7.1.0/themes/classic/theme.css">
-
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/fullcalendar@7.1.0/themes/classic/palette.css">
-
-    <!-- FullCalendar JavaScript -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@7.1.0/skeleton.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@7.1.0/themes/classic/theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@7.1.0/themes/classic/palette.css">
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@7.1.0/all/global.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@7.1.0/themes/classic/global.js"></script>
-
 </head>
-
-
 <body>
-
-    <!-- =========================
-         NAVIGATION
-         ========================= -->
-
     <header>
-
-        <div class="logo">
-            <img src="images/logo.png" alt="Haven Floral Rentals">
-        </div>
-
+        <div class="logo"><img src="images/logo.png" alt="Haven Floral Rentals"></div>
         <nav>
             <a href="index.html">Home</a>
             <a href="gallery.html">Gallery</a>
@@ -47,114 +24,31 @@
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
-
     </header>
 
-
-    <!-- =========================
-         AVAILABILITY PAGE
-         ========================= -->
-
     <main class="availability-page">
-
-
-        <!-- Page Introduction -->
-
         <section class="availability-intro">
-
-            <p class="section-label">
-                START YOUR DESIGN
-            </p>
-
-            <h1>
-                Choose Your Event Date
-            </h1>
-
-            <p>
-                Select an available date to begin designing your floral arrangement.
-            </p>
-
+            <p class="section-label">START YOUR DESIGN</p>
+            <h1>Choose Your Event Date</h1>
+            <p>Select an available date to begin designing your floral arrangement.</p>
         </section>
-
-
-        <!-- =========================
-             CALENDAR
-             ========================= -->
 
         <section class="calendar-section">
-
-
-            <!-- FullCalendar is created here -->
-
             <div id="calendar"></div>
 
-
-            <!-- =========================
-                 AVAILABILITY LEGEND
-                 ========================= -->
-
             <div class="availability-legend">
-
-                <div class="legend-item">
-
-                    <span class="legend-dot available-dot"></span>
-
-                    Available
-
-                </div>
-
-
-                <div class="legend-item">
-
-                    <span class="legend-dot unavailable-dot"></span>
-
-                    Unavailable
-
-                </div>
-
-
-                <div class="legend-item">
-
-                    <span class="legend-dot selected-dot"></span>
-
-                    Selected
-
-                </div>
-
+                <div class="legend-item"><span class="legend-dot available-dot"></span>Available</div>
+                <div class="legend-item"><span class="legend-dot unavailable-dot"></span>Unavailable</div>
+                <div class="legend-item"><span class="legend-dot selected-dot"></span>Selected</div>
             </div>
-
-
-            <!-- =========================
-                 DATE SELECTION
-                 ========================= -->
 
             <div class="date-selection">
-
-                <p id="selected-date-text">
-                    Please select an available date.
-                </p>
-
-
-                <a id="continue-design"
-                   href="arch.html"
-                   class="button primary-button disabled">
-
-                    Continue to Design
-
-                </a>
-
+                <p id="selected-date-text">Please select an available date.</p>
+                <a id="continue-design" href="arch.html" class="button primary-button disabled">Continue to Design</a>
             </div>
-
-
         </section>
-
     </main>
 
-
-    <!-- Our Calendar JavaScript -->
-
     <script src="availability.js"></script>
-
 </body>
-
 </html>

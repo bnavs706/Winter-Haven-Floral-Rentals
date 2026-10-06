@@ -1,99 +1,102 @@
-console.log("Arch builder JavaScript is working!");
-
-const selectedSection = document.getElementById("selected-section");
-const archSections = document.querySelectorAll(".arch-zone");
-
-let currentSection = null;
-
-console.log(archSections);
+console.log("Arch designer JavaScript is working!");
 
 
-// Select an arch section
+// Get all floral design buttons
+const floralOptions = document.querySelectorAll(".floral-option");
 
-archSections.forEach(function (section) {
 
-    section.addEventListener("click", function() {
+// Get the large preview image
+const archPreviewImage = document.getElementById("arch-preview-image");
 
-        currentSection = section;
-        console.log(currentSection);
 
-        selectedSection.textContent = section.dataset.section;
+// Get the selected design text
+const selectedDesign = document.getElementById("selected-design");
+
+
+// Listen for clicks on each floral design
+floralOptions.forEach(function (option) {
+
+    option.addEventListener("click", function () {
+
+        // Remove selected style from all floral options
+        floralOptions.forEach(function (button) {
+            button.classList.remove("selected");
+        });
+
+
+        // Highlight the option that was clicked
+        option.classList.add("selected");
+
+
+        // Get the arch image stored in the button
+        const newImage = option.dataset.image;
+
+
+        // Change the large preview
+        archPreviewImage.src = newImage;
+
+
+        // Get the name of the design
+        const designName =
+            option.querySelector("span").textContent;
+
+
+        // Update the selected design text
+        selectedDesign.textContent =
+            "Selected: " + designName;
+
+
+        console.log("Selected design:", designName);
+
+    });
+    // =========================
+// LIGHTING
+// =========================
+
+const lightOptions = document.querySelectorAll(".light-option");
+
+const lightPreviewImage =
+    document.getElementById("light-preview-image");
+
+
+lightOptions.forEach(function (option) {
+
+    option.addEventListener("click", function () {
+
+        // Remove selected style from all lighting buttons
+        lightOptions.forEach(function (button) {
+            button.classList.remove("selected");
+        });
+
+
+        // Highlight the selected lighting option
+        option.classList.add("selected");
+
+
+        // Get the light image
+        const lightImage = option.dataset.image;
+
+
+        // If "None" was selected
+        if (lightImage === "") {
+
+            lightPreviewImage.src = "";
+            lightPreviewImage.style.display = "none";
+
+            console.log("Lighting: None");
+
+        } else {
+
+            // Show the lighting layer
+            lightPreviewImage.src = lightImage;
+            lightPreviewImage.style.display = "block";
+
+            console.log("Lighting: Hanging Lights");
+
+        }
 
     });
 
 });
 
-
-// Add flowers button
-
-const addFlowersButton = document.getElementById("add-flowers");
-
-addFlowersButton.addEventListener("click", function () {
-
-    if (currentSection === null) {
-
-        console.log("Please select a section first.");
-
-    } else {
-
-        if (currentSection.dataset.hasFlowers === "true") {
-
-            console.log("This section already has flowers.");
-
-        } else {
-
-            currentSection.dataset.hasFlowers = "true";
-            
-
-            const flowerImage = document.createElement("img");
-
-            flowerImage.src = "images/purple-flower.png";
-            flowerImage.classList.add("flower-image");
-
-            currentSection.appendChild(flowerImage);
-
-            console.log(flowerImage);
-            console.log("Flowers added!");
-        }
-
-    }
-
 });
-
-
-// Remove flowers button
-
-const removeFlowersButton = document.getElementById("remove-flowers");
-
-removeFlowersButton.addEventListener("click", function () {
-
-    if (currentSection === null) {
-
-        console.log("Please select a section first.");
-
-    } else {
-
-        if (currentSection.dataset.hasFlowers === "true") {
-
-            const flowerImage =
-                currentSection.querySelector(".flower-image");
-
-            console.log(flowerImage);
-
-            flowerImage.remove();
-
-            currentSection.dataset.hasFlowers = "false";
-            
-        } else {
-
-            console.log("This section has no flowers.");
-
-        }
-
-    }
-
-});
-
-
-console.log(selectedSection);
-console.log(addFlowersButton);
