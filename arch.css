@@ -218,8 +218,12 @@
     object-fit: contain;
 }
 
-.light-layer {
+.drape-layer {
     z-index: 1;
+}
+
+.light-layer {
+    z-index: 2;
 
     width: 82% !important;
     height: 82% !important;
@@ -229,5 +233,5 @@
 }
 
 .arch-layer {
-    z-index: 2;
+    z-index: 3;
 }

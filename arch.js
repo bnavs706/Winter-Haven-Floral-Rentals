@@ -1,19 +1,19 @@
 console.log("Arch designer JavaScript is working!");
 
 
-// Get all floral design buttons
+// =========================
+// FLORAL DESIGN
+// =========================
+
 const floralOptions = document.querySelectorAll(".floral-option");
 
+const archPreviewImage =
+    document.getElementById("arch-preview-image");
 
-// Get the large preview image
-const archPreviewImage = document.getElementById("arch-preview-image");
-
-
-// Get the selected design text
-const selectedDesign = document.getElementById("selected-design");
+const selectedDesign =
+    document.getElementById("selected-design");
 
 
-// Listen for clicks on each floral design
 floralOptions.forEach(function (option) {
 
     option.addEventListener("click", function () {
@@ -23,33 +23,31 @@ floralOptions.forEach(function (option) {
             button.classList.remove("selected");
         });
 
-
-        // Highlight the option that was clicked
+        // Highlight selected floral design
         option.classList.add("selected");
 
-
-        // Get the arch image stored in the button
+        // Get image stored in button
         const newImage = option.dataset.image;
 
-
-        // Change the large preview
+        // Change floral arch preview
         archPreviewImage.src = newImage;
 
-
-        // Get the name of the design
+        // Get design name
         const designName =
             option.querySelector("span").textContent;
 
-
-        // Update the selected design text
+        // Update selected design text
         selectedDesign.textContent =
             "Selected: " + designName;
-
 
         console.log("Selected design:", designName);
 
     });
-    // =========================
+
+});
+
+
+// =========================
 // LIGHTING
 // =========================
 
@@ -63,21 +61,18 @@ lightOptions.forEach(function (option) {
 
     option.addEventListener("click", function () {
 
-        // Remove selected style from all lighting buttons
+        // Remove selected style from lighting buttons
         lightOptions.forEach(function (button) {
             button.classList.remove("selected");
         });
 
-
-        // Highlight the selected lighting option
+        // Highlight selected option
         option.classList.add("selected");
 
-
-        // Get the light image
+        // Get light image
         const lightImage = option.dataset.image;
 
-
-        // If "None" was selected
+        // None selected
         if (lightImage === "") {
 
             lightPreviewImage.src = "";
@@ -87,7 +82,7 @@ lightOptions.forEach(function (option) {
 
         } else {
 
-            // Show the lighting layer
+            // Show lights
             lightPreviewImage.src = lightImage;
             lightPreviewImage.style.display = "block";
 
@@ -98,5 +93,51 @@ lightOptions.forEach(function (option) {
     });
 
 });
+
+
+// =========================
+// DRAPING
+// =========================
+
+const drapeOptions = document.querySelectorAll(".drape-option");
+
+const drapePreviewImage =
+    document.getElementById("drape-preview-image");
+
+
+drapeOptions.forEach(function (option) {
+
+    option.addEventListener("click", function () {
+
+        // Remove selected style from drape buttons
+        drapeOptions.forEach(function (button) {
+            button.classList.remove("selected");
+        });
+
+        // Highlight selected option
+        option.classList.add("selected");
+
+        // Get drape image
+        const drapeImage = option.dataset.image;
+
+        // None selected
+        if (drapeImage === "") {
+
+            drapePreviewImage.src = "";
+            drapePreviewImage.style.display = "none";
+
+            console.log("Draping: None");
+
+        } else {
+
+            // Show drapes
+            drapePreviewImage.src = drapeImage;
+            drapePreviewImage.style.display = "block";
+
+            console.log("Draping: Drapes");
+
+        }
+
+    });
 
 });
