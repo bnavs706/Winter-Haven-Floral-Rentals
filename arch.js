@@ -1,5 +1,7 @@
 console.log("Arch designer JavaScript is working!");
-
+localStorage.setItem("selectedFloralDesign", "Golden Garden");
+localStorage.setItem("selectedDraping", "None");
+localStorage.setItem("selectedLighting", "None");
 
 // =========================
 // FLORAL DESIGN
@@ -35,7 +37,7 @@ floralOptions.forEach(function (option) {
         // Get design name
         const designName =
             option.querySelector("span").textContent;
-
+            localStorage.setItem("selectedFloralDesign", designName);
         // Update selected design text
         selectedDesign.textContent =
             "Selected: " + designName;
@@ -71,7 +73,11 @@ lightOptions.forEach(function (option) {
 
         // Get light image
         const lightImage = option.dataset.image;
-
+        if (lightImage === "") {
+        localStorage.setItem("selectedLighting", "None");
+        }    else {
+         localStorage.setItem("selectedLighting", "Hanging Lights");
+        }
         // None selected
         if (lightImage === "") {
 
@@ -119,7 +125,11 @@ drapeOptions.forEach(function (option) {
 
         // Get drape image
         const drapeImage = option.dataset.image;
-
+        if (drapeImage === "") {
+        localStorage.setItem("selectedDraping", "None");
+        } else {
+        localStorage.setItem("selectedDraping", "Drapes");
+         }
         // None selected
         if (drapeImage === "") {
 
