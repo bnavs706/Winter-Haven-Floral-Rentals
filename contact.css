@@ -327,3 +327,13 @@
 .selected-dot {
     background-color: #c6a15b;
 }
+.arch-layer {
+    position: absolute;
+
+    max-width: 90%;
+    max-height: 470px;
+
+    object-fit: contain;
+
+    z-index: 2;
+}

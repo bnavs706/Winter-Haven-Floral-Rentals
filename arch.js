@@ -1,99 +1,153 @@
-console.log("Arch builder JavaScript is working!");
+console.log("Arch designer JavaScript is working!");
+localStorage.setItem("selectedFloralDesign", "Golden Garden");
+localStorage.setItem("selectedDraping", "None");
+localStorage.setItem("selectedLighting", "None");
 
-const selectedSection = document.getElementById("selected-section");
-const archSections = document.querySelectorAll(".arch-zone");
+// =========================
+// FLORAL DESIGN
+// =========================
 
-let currentSection = null;
+const floralOptions = document.querySelectorAll(".floral-option");
 
-console.log(archSections);
+const archPreviewImage =
+    document.getElementById("arch-preview-image");
+
+const selectedDesign =
+    document.getElementById("selected-design");
 
 
-// Select an arch section
+floralOptions.forEach(function (option) {
 
-archSections.forEach(function (section) {
+    option.addEventListener("click", function () {
 
-    section.addEventListener("click", function() {
+        // Remove selected style from all floral options
+        floralOptions.forEach(function (button) {
+            button.classList.remove("selected");
+        });
 
-        currentSection = section;
-        console.log(currentSection);
+        // Highlight selected floral design
+        option.classList.add("selected");
 
-        selectedSection.textContent = section.dataset.section;
+        // Get image stored in button
+        const newImage = option.dataset.image;
+
+        // Change floral arch preview
+        archPreviewImage.src = newImage;
+
+        // Get design name
+        const designName =
+            option.querySelector("span").textContent;
+            localStorage.setItem("selectedFloralDesign", designName);
+        // Update selected design text
+        selectedDesign.textContent =
+            "Selected: " + designName;
+
+        console.log("Selected design:", designName);
 
     });
 
 });
 
 
-// Add flowers button
+// =========================
+// LIGHTING
+// =========================
 
-const addFlowersButton = document.getElementById("add-flowers");
+const lightOptions = document.querySelectorAll(".light-option");
 
-addFlowersButton.addEventListener("click", function () {
+const lightPreviewImage =
+    document.getElementById("light-preview-image");
 
-    if (currentSection === null) {
 
-        console.log("Please select a section first.");
+lightOptions.forEach(function (option) {
 
-    } else {
+    option.addEventListener("click", function () {
 
-        if (currentSection.dataset.hasFlowers === "true") {
+        // Remove selected style from lighting buttons
+        lightOptions.forEach(function (button) {
+            button.classList.remove("selected");
+        });
 
-            console.log("This section already has flowers.");
+        // Highlight selected option
+        option.classList.add("selected");
+
+        // Get light image
+        const lightImage = option.dataset.image;
+        if (lightImage === "") {
+        localStorage.setItem("selectedLighting", "None");
+        }    else {
+         localStorage.setItem("selectedLighting", "Hanging Lights");
+        }
+        // None selected
+        if (lightImage === "") {
+
+            lightPreviewImage.src = "";
+            lightPreviewImage.style.display = "none";
+
+            console.log("Lighting: None");
 
         } else {
 
-            currentSection.dataset.hasFlowers = "true";
-            
+            // Show lights
+            lightPreviewImage.src = lightImage;
+            lightPreviewImage.style.display = "block";
 
-            const flowerImage = document.createElement("img");
+            console.log("Lighting: Hanging Lights");
 
-            flowerImage.src = "images/purple-flower.png";
-            flowerImage.classList.add("flower-image");
-
-            currentSection.appendChild(flowerImage);
-
-            console.log(flowerImage);
-            console.log("Flowers added!");
         }
 
-    }
+    });
 
 });
 
 
-// Remove flowers button
+// =========================
+// DRAPING
+// =========================
 
-const removeFlowersButton = document.getElementById("remove-flowers");
+const drapeOptions = document.querySelectorAll(".drape-option");
 
-removeFlowersButton.addEventListener("click", function () {
+const drapePreviewImage =
+    document.getElementById("drape-preview-image");
 
-    if (currentSection === null) {
 
-        console.log("Please select a section first.");
+drapeOptions.forEach(function (option) {
 
-    } else {
+    option.addEventListener("click", function () {
 
-        if (currentSection.dataset.hasFlowers === "true") {
+        // Remove selected style from drape buttons
+        drapeOptions.forEach(function (button) {
+            button.classList.remove("selected");
+        });
 
-            const flowerImage =
-                currentSection.querySelector(".flower-image");
+        // Highlight selected option
+        option.classList.add("selected");
 
-            console.log(flowerImage);
+        // Get drape image
+        const drapeImage = option.dataset.image;
+        if (drapeImage === "") {
+        localStorage.setItem("selectedDraping", "None");
+        } else {
+        localStorage.setItem("selectedDraping", "Drapes");
+         }
+        // None selected
+        if (drapeImage === "") {
 
-            flowerImage.remove();
+            drapePreviewImage.src = "";
+            drapePreviewImage.style.display = "none";
 
-            currentSection.dataset.hasFlowers = "false";
-            
+            console.log("Draping: None");
+
         } else {
 
-            console.log("This section has no flowers.");
+            // Show drapes
+            drapePreviewImage.src = drapeImage;
+            drapePreviewImage.style.display = "block";
+
+            console.log("Draping: Drapes");
 
         }
 
-    }
+    });
 
 });
-
-
-console.log(selectedSection);
-console.log(addFlowersButton);

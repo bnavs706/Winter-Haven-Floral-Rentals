@@ -1,0 +1,237 @@
+/* Arch Designer */
+.arch-designer {
+    min-height: 100vh;
+    padding: 50px 60px 80px;
+    background-color: #f3efe7;
+    color: #111111;
+}
+
+/* Page heading */
+.arch-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.arch-heading > p:first-child {
+    color: #c6a15b;
+    letter-spacing: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.arch-heading h1 {
+    font-size: 52px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+.arch-instructions {
+    font-size: 18px;
+    color: #555555;
+}
+
+/* Main designer layout */
+.designer-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+/* Arch preview */
+.arch-preview {
+    flex: 1;
+    background-color: #ffffff;
+    border: 1px solid #c6a15b;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.arch-preview h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.arch-preview-area {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#arch-preview-image {
+    max-width: 90%;
+    max-height: 470px;
+    object-fit: contain;
+}
+
+/* Customization panel */
+.arch-controls {
+    width: 340px;
+    background-color: #111111;
+    color: #f5f0e8;
+    padding: 30px;
+    border: 1px solid #c6a15b;
+    border-radius: 12px;
+}
+
+.arch-controls h2 {
+    color: #c6a15b;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.arch-controls h3 {
+    color: #c6a15b;
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+.design-option {
+    margin-bottom: 30px;
+}
+
+/* Floral design options */
+#selected-design {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #d8d2c8;
+    margin-bottom: 15px;
+}
+
+.floral-options {
+    display: flex;
+    gap: 12px;
+}
+
+.floral-option {
+    flex: 1;
+    background-color: #222222;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 10px;
+    color: #f5f0e8;
+    cursor: pointer;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.floral-option img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 8px;
+}
+
+.floral-option span {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.floral-option:hover {
+    border-color: #c6a15b;
+    transform: translateY(-2px);
+}
+
+.floral-option.selected {
+    border-color: #c6a15b;
+    background-color: #2a261e;
+}
+
+/* Draping and lighting buttons */
+.option-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.option-buttons button {
+    padding: 9px 12px;
+    background-color: transparent;
+    color: #f5f0e8;
+    border: 1px solid #c6a15b;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.option-buttons button:hover,
+.option-buttons button.selected {
+    background-color: #c6a15b;
+    color: #111111;
+}
+
+/* Continue button */
+.arch-continue {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 0;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .arch-designer {
+        padding: 40px 20px;
+    }
+
+    .designer-container {
+        flex-direction: column;
+    }
+
+    .arch-controls {
+        width: auto;
+    }
+
+    .arch-preview-area {
+        height: 400px;
+    }
+}
+
+/* ========================================
+   ARCH PREVIEW LAYERS
+   ======================================== */
+
+.arch-layers {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.arch-layers img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.drape-layer {
+    z-index: 1;
+}
+
+.light-layer {
+    z-index: 2;
+
+    width: 82% !important;
+    height: 82% !important;
+
+    top: 5% !important;
+    left: 9% !important;
+}
+
+.arch-layer {
+    z-index: 3;
+}
