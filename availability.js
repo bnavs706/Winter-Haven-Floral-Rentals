@@ -75,6 +75,10 @@ document.addEventListener("DOMContentLoaded", function () {
             selectedDayElement = info.dayEl;
 
 
+            // Save selected date for the Review page
+            localStorage.setItem("selectedDate", selectedDate);
+
+
             // Highlight selected date
             selectedDayElement.classList.add("selected-date");
 
@@ -101,6 +105,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             console.log("Selected date:", selectedDate);
+            console.log("Saved date:", localStorage.getItem("selectedDate"));
+
         }
 
     });
