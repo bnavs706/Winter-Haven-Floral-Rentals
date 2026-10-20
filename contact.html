@@ -132,7 +132,7 @@
 
 
             <!-- RIGHT SIDE FORM -->
-            <form class="contact-form">
+            <form class="contact-form" id ="contactForm">
 
 
                 <!-- NAME + EMAIL -->
@@ -228,7 +228,7 @@
                 <div class="form-group half-width">
 
                     <label for="event-date">
-                        Event Date *
+                        Event Date 
                     </label>
 
                     <input
@@ -259,18 +259,18 @@
                 <!-- BUTTON -->
                 <!-- Not connected to email yet -->
                 <button
-                    type="button"
+                    type="submit"
                     class="send-button"
                 >
                     SEND MESSAGE
                 </button>
-
+            <p id="formStatus" role="status" aria-live="polite"></p>
             </form>
 
         </section>
 
     </main>
-
+    <script src="contact.js"></script>
 </body>
 
 </html>
