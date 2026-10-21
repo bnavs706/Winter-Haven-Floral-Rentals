@@ -19,3 +19,13 @@ This section of the page will be organized as such, you will be able to see samp
 
 Once the arch is fully customized there will be a review screen showing exactly what the customer ordered along with down payment. Once booked, they see a checkmark with all the information they need. Total cost, selected date and party package(the arch and whatever they added) displayed to them.
 
+5 WEEK PLAN
+The objective for the last weeks remaining will be to focus primarily on the packages for the arches.
+(Pre-made packages)
+The website will contain the premade packages clients can choose from. Such as Birthday, Wedding, Bridal Shower they will be able to see details on the package. The idea of this option is for a client who just wants to see already designed and available stuff to pick from rather than getting creative and designing
+(Arch Builder)
+This is for the particular clients who want to be more in depth with the design they choose from. Such as drapes, light fixtures perhaps they want easels they can design on to. The plan is for the client to add into their cart and edit the design to their liking, further development will include the other accessories clients can choose from
+(Calendar)
+This is will be designed around the business owner's schedule. They will be able to include their availability for user's to see and choose from.
+(Data Base)
+Allows client to see what is in use/ or currently available. Ideally a piece should always be available but if equipment gets damaged it can reflected on the site so there is no confusion on checkout
