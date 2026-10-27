@@ -1,14 +1,18 @@
 
-const { Resend } = require("resend");
+const { Resend } = require('resend');
 
 const resend = new Resend(process.env.EMAIL_API_KEY);
 
+// Sends contact inquiries to the business owner
 const sendInquiryEmail = async (inquiry) => {
+
     const { data, error } = await resend.emails.send({
         from: process.env.EMAIL_FROM,
         to: [process.env.EMAIL_TO],
         replyTo: inquiry.email,
+
         subject: "New Haven Floral Rentals Inquiry",
+
         text: `
 New Customer Inquiry
 
