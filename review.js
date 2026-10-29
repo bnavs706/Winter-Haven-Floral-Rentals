@@ -1,5 +1,5 @@
-console.log("Review page JavaScript is working!");
 
+console.log("Review page JavaScript is working!");
 
 // =========================
 // GET SAVED SELECTIONS
@@ -19,40 +19,35 @@ const selectedLighting =
 
 
 // =========================
-// FORMAT AND DISPLAY DATE
+// FORMAT EVENT DATE
 // =========================
 
-if (selectedDate) {
+function formatEventDate(dateString) {
 
-    // Split YYYY-MM-DD into separate pieces
-    const dateParts = selectedDate.split("-");
+    if (!dateString) {
+        return "No date selected";
+    }
 
-    const year = Number(dateParts[0]);
-    const month = Number(dateParts[1]) - 1;
-    const day = Number(dateParts[2]);
+    const [year, month, day] = dateString
+        .split("-")
+        .map(Number);
 
-    // Create the date
-    const eventDate = new Date(year, month, day);
+    const eventDate = new Date(year, month - 1, day);
 
-    // Format the date nicely
-    const formattedDate = eventDate.toLocaleDateString(
-        "en-US",
-        {
-            month: "long",
-            day: "numeric",
-            year: "numeric"
-        }
-    );
-
-    // Display formatted date
-    document.getElementById("review-date").textContent =
-        formattedDate;
-
-} else {
-
-    document.getElementById("review-date").textContent =
-        "No date selected";
+    return eventDate.toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric"
+    });
 }
+
+
+// =========================
+// DISPLAY EVENT DATE
+// =========================
+
+document.getElementById("review-date").textContent =
+    formatEventDate(selectedDate);
 
 
 // =========================
@@ -70,14 +65,151 @@ document.getElementById("review-lighting").textContent =
 
 
 // =========================
-// CONFIRM DESIGN
+// GET BOOKING FORM ELEMENTS
 // =========================
 
 const confirmButton =
     document.getElementById("confirm-design");
 
-confirmButton.addEventListener("click", function () {
+const bookingMessage =
+    document.getElementById("booking-message");
 
-    alert("Your design has been confirmed!");
+
+// =========================
+// SUBMIT BOOKING REQUEST
+// =========================
+
+confirmButton.addEventListener("click", async function () {
+
+    // Get customer information
+    const name =
+        document.getElementById("booking-name")
+            .value.trim();
+
+    const emailInput =
+        document.getElementById("booking-email");
+
+    const email =
+        emailInput.value.trim();
+
+    const phone =
+        document.getElementById("booking-phone")
+            .value.trim();
+
+    const eventType =
+        document.getElementById("booking-event-type")
+            .value;
+
+    // =========================
+    // VALIDATE INFORMATION
+    // =========================
+
+    if (!name || !email || !eventType || !selectedDate) {
+
+        bookingMessage.textContent =
+            "Please complete all required fields and select an event date.";
+
+        return;
+    }
+
+    if (!emailInput.checkValidity()) {
+
+        bookingMessage.textContent =
+            "Please enter a valid email address.";
+
+        return;
+    }
+
+    // =========================
+    // PREPARE BOOKING DATA
+    // =========================
+
+    const booking = {
+        name: name,
+        email: email,
+        phone: phone,
+        eventType: eventType,
+        eventDate: selectedDate,
+        packageName: selectedFloralDesign || "Golden Garden",
+        draping: selectedDraping || "None",
+        lighting: selectedLighting || "None"
+    };
+
+    // Prevent double submissions
+    confirmButton.disabled = true;
+    confirmButton.textContent = "Submitting...";
+
+    bookingMessage.textContent = "";
+
+    try {
+
+        // =========================
+        // SEND BOOKING TO BACKEND
+        // =========================
+
+        const response = await fetch(
+            "http://localhost:3000/api/bookings",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(booking)
+            }
+        );
+
+        const result = await response.json();
+
+        // =========================
+        // HANDLE SERVER ERRORS
+        // =========================
+
+        if (!response.ok) {
+
+            bookingMessage.textContent =
+                result.message ||
+                result.error ||
+                "Unable to submit your booking request.";
+
+            return;
+        }
+
+        // =========================
+        // SAVE SUCCESS INFORMATION
+        // =========================
+
+        sessionStorage.setItem(
+            "havenBookingSuccess",
+            JSON.stringify({
+                bookingId: result.bookingId,
+                eventDate: selectedDate,
+                status: result.status
+            })
+        );
+
+        // =========================
+        // REDIRECT TO SUCCESS PAGE
+        // =========================
+
+        window.location.href =
+            "booking-success.html";
+
+    } catch (error) {
+
+        console.error(
+            "Booking submission failed:",
+            error
+        );
+
+        bookingMessage.textContent =
+            "Unable to connect to the booking server. Please try again.";
+
+    } finally {
+
+        confirmButton.disabled = false;
+
+        confirmButton.textContent =
+            "Submit Booking Request";
+    }
 
 });

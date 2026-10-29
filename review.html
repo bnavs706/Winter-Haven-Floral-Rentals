@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Review Your Design | Haven Floral Rentals</title>
 
@@ -14,120 +16,192 @@
 <body>
 
     <header>
-
         <div class="logo">
-            <img src="images/logo.png" alt="Haven Floral Rentals">
+            <h1>Haven Floral Rentals</h1>
         </div>
 
         <nav>
             <a href="index.html">Home</a>
             <a href="gallery.html">Gallery</a>
-            <a href="event.html" class="active">Event</a>
+            <a href="event.html">Event</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
-
     </header>
-
 
     <main class="review-page">
 
-        <section class="review-heading">
-
-            <p>YOUR EVENT</p>
+        <section class="review-container">
 
             <h1>Review Your Design</h1>
 
             <p>
-                Make sure everything looks right before continuing.
+                Please review your floral arrangement
+                and event details before submitting
+                your booking request.
             </p>
 
-        </section>
+            <!-- EVENT DATE -->
 
+            <div class="review-section">
 
-        <section class="review-card">
+                <h2>Your Event Date</h2>
 
-            <h2>Your Selections</h2>
-
-
-            <div class="review-item">
-
-                <span class="review-label">
-                    Event Date
-                </span>
-
-                <span id="review-date">
+                <p id="review-date">
                     No date selected
-                </span>
+                </p>
 
             </div>
 
+            <!-- FLORAL DESIGN -->
 
-            <div class="review-item">
+            <div class="review-section">
 
-                <span class="review-label">
-                    Floral Design
-                </span>
+                <h2>Your Floral Design</h2>
 
-                <span id="review-floral">
-                    Golden Garden
-                </span>
+                <p id="review-floral">
+                    No floral design selected
+                </p>
 
             </div>
 
+            <!-- DRAPING -->
 
-            <div class="review-item">
+            <div class="review-section">
 
-                <span class="review-label">
-                    Draping
-                </span>
+                <h2>Draping</h2>
 
-                <span id="review-draping">
+                <p id="review-draping">
                     None
-                </span>
+                </p>
 
             </div>
 
+            <!-- LIGHTING -->
 
-            <div class="review-item">
+            <div class="review-section">
 
-                <span class="review-label">
-                    Lighting
-                </span>
+                <h2>Lighting</h2>
 
-                <span id="review-lighting">
+                <p id="review-lighting">
                     None
-                </span>
+                </p>
 
             </div>
 
+            <!-- EDIT DESIGN -->
 
-            <div class="review-actions">
+            <div class="review-section">
 
-                <a
-                    href="arch.html"
-                    class="button secondary-button"
-                >
+                <a href="arch.html"
+                   class="edit-design-button">
                     Edit Design
                 </a>
 
+            </div>
+
+            <!-- BOOKING FORM -->
+
+            <section class="booking-form-section">
+
+                <h2>Complete Your Booking Request</h2>
+
+                <p>
+                    Enter your contact information below.
+                    Your booking will remain pending
+                    until approved by Haven Floral Rentals.
+                </p>
+
+                <div class="booking-field">
+
+                    <label for="booking-name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="booking-name"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+                <div class="booking-field">
+
+                    <label for="booking-email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="booking-email"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+                <div class="booking-field">
+
+                    <label for="booking-phone">
+                        Phone Number (Optional)
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="booking-phone"
+                        autocomplete="tel"
+                    >
+
+                </div>
+
+                <div class="booking-field">
+
+                    <label for="booking-event-type">
+                        Event Type
+                    </label>
+
+                    <select
+                        id="booking-event-type"
+                        required
+                    >
+                        <option value="">
+                            Select Event Type
+                        </option>
+
+                        <option value="Wedding">
+                            Wedding
+                        </option>
+
+                        <option value="Birthday">
+                            Birthday
+                        </option>
+
+                        <option value="Bridal Shower">
+                            Bridal Shower
+                        </option>
+                    </select>
+
+                </div>
+
+                <p id="booking-message" role="status"></p>
+
+                <!-- SUBMIT BUTTON -->
+
                 <button
                     type="button"
-                    class="button primary-button"
-                    id="confirm-design"
-                >
-                    Confirm Design
+                    id="confirm-design">
+                    Submit Booking Request
                 </button>
 
-            </div>
+            </section>
 
         </section>
 
     </main>
 
-
     <script src="review.js"></script>
 
 </body>
-
 </html>
