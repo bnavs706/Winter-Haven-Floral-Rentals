@@ -1,0 +1,229 @@
+
+/* =========================
+   MY BOOKINGS PAGE
+========================= */
+
+.bookings-page {
+    min-height: 85vh;
+    padding: 70px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: #111111;
+}
+
+/* Main ivory card */
+
+.bookings-card {
+    width: 100%;
+    max-width: 560px;
+    padding: 55px;
+    box-sizing: border-box;
+    background: #faf7f0;
+    color: #29241f;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+}
+
+/* Gold email icon */
+
+.bookings-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    border: 2px solid #c6a15b;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+    color: #c6a15b;
+}
+
+/* Headings and descriptions */
+
+.bookings-card h1 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    color: #29241f;
+    margin-bottom: 15px;
+}
+
+.bookings-card h2 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.bookings-intro {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #736b61;
+    margin-bottom: 35px;
+}
+
+/* Forms */
+
+#email-form,
+#verification-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+#email-form label,
+#verification-form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #453d34;
+}
+
+#email-form input,
+#verification-form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #d7c7ae;
+    border-radius: 6px;
+    background: white;
+    color: #29241f;
+}
+
+#email-form input:focus,
+#verification-form input:focus {
+    outline: 2px solid #c6a15b;
+    outline-offset: 2px;
+}
+
+/* Gold buttons */
+
+.bookings-button {
+    width: 100%;
+    padding: 15px 20px;
+    background: #c6a15b;
+    color: #171410;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.bookings-button:hover {
+    background: #b08a52;
+}
+
+.bookings-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Messages */
+
+#verification-message {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #736b61;
+}
+
+/* Booking history */
+
+#booking-history {
+    margin-top: 30px;
+    text-align: left;
+}
+
+#booking-history h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#booking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Important: keep hidden sections hidden */
+
+#verification-form[hidden],
+#booking-history[hidden] {
+    display: none;
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+    .bookings-page {
+        padding: 35px 15px;
+    }
+
+    .bookings-card {
+        padding: 35px 24px;
+    }
+
+    .bookings-card h1 {
+        font-size: 29px;
+    }
+
+    .bookings-card h2 {
+        font-size: 22px;
+    }
+    
+/* =========================
+   INDIVIDUAL BOOKING CARDS
+========================= */
+
+.booking-item {
+    padding: 22px;
+    border: 1px solid #dfcfb6;
+    border-radius: 8px;
+    background: #fffdf9;
+}
+
+.booking-item h3 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    margin: 0 0 15px;
+    color: #29241f;
+}
+
+.booking-item p {
+    margin: 9px 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #5e5449;
+}
+
+.booking-item strong {
+    color: #29241f;
+}
+
+/* Preserve hidden email form */
+
+#email-form[hidden] {
+    display: none;
+}
+
+/* =========================
+   FORM VISIBILITY FIX
+========================= */
+
+#email-form:not([hidden]),
+#verification-form:not([hidden]) {
+    display: flex;
+    flex-direction: column;
+}
+
+#email-form[hidden],
+#verification-form[hidden],
+#booking-history[hidden] {
+    display: none !important;
+}
+
+}
