@@ -3,6 +3,19 @@ const express = require('express');
 const router = express.Router();
 
 const db = require('../database/db');
+
+console.log("DATABASE MODULE:", require.resolve('../database/db'));
+
+console.log("DATABASE FILE:", require('node:path').join(
+    require('node:path').dirname(require.resolve('../database/db')),
+    'bookings.db'
+));
+console.log(
+    "BOOKING API DATABASE COLUMNS:",
+    db.prepare("PRAGMA table_info(bookings)")
+      .all()
+      .map(column => column.name)
+);
 const { sendBookingEmail } = require('../services/bookingEmailService');
 
 // POST /api/bookings
@@ -15,7 +28,9 @@ router.post('/', async (req, res) => {
         phone,
         eventType,
         eventDate,
-        packageName
+        packageName,
+        draping,
+        lighting
     } = req.body || {};
 
     // Validate required booking information
@@ -48,6 +63,16 @@ router.post('/', async (req, res) => {
             ? packageName.trim()
             : null;
 
+    const cleanDraping =
+        typeof draping === 'string'
+            ? draping.trim()
+            : null;
+
+    const cleanLighting =
+        typeof lighting === 'string'
+            ? lighting.trim()
+            : null;
+
     try {
 
         // Save booking into SQLite
@@ -58,9 +83,11 @@ router.post('/', async (req, res) => {
                 phone,
                 event_type,
                 event_date,
-                package_name
+                package_name,
+                draping,
+                lighting
             )
-            VALUES (?, ?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         `);
 
         const result = statement.run(
@@ -69,7 +96,9 @@ router.post('/', async (req, res) => {
             cleanPhone,
             cleanEventType,
             eventDate,
-            cleanPackage
+            cleanPackage,
+            cleanDraping,
+            cleanLighting
         );
 
         const bookingId = Number(result.lastInsertRowid);
@@ -84,7 +113,9 @@ router.post('/', async (req, res) => {
                 email: cleanEmail,
                 eventType: cleanEventType,
                 eventDate: eventDate,
-                packageName: cleanPackage
+                packageName: cleanPackage,
+                draping: cleanDraping,
+                lighting: cleanLighting
             });
 
             emailSent = true;

@@ -7,6 +7,8 @@ const express = require("express");
 // Import routes
 const contactRoutes = require("./routes/contactRoutes");
 const bookingRoutes = require("./routes/bookingRoutes");
+const bookingVerificationRoutes =
+    require("./routes/bookingVerificationRoutes");
 
 // Initialize Express
 const app = express();
@@ -19,6 +21,7 @@ app.use(express.json());
 // Routes
 app.use("/api", contactRoutes);
 app.use("/api/bookings", bookingRoutes);
+app.use("/api/bookings", bookingVerificationRoutes);
 
 // Test endpoint
 app.get("/api/hello", (req, res) => {
