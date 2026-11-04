@@ -15,21 +15,26 @@
 
 <body>
 
+    <!-- SAME HEADER AS HOMEPAGE -->
     <header>
         <div class="logo">
-            <h1>Haven Floral Rentals</h1>
+            <img src="images/logo.png"
+                 alt="Haven Floral Rentals">
         </div>
 
         <nav>
             <a href="index.html">Home</a>
             <a href="gallery.html">Gallery</a>
             <a href="event.html">Event</a>
-            <a href="my-bookings.html">My Bookings</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
+            <a class="active" href="my-bookings.html">
+                My Bookings
+            </a>
         </nav>
     </header>
 
+    <!-- MY BOOKINGS PAGE -->
     <main class="bookings-page">
 
         <section class="bookings-card">
@@ -47,7 +52,6 @@
             </p>
 
             <!-- EMAIL ENTRY -->
-
             <form id="email-form">
 
                 <label for="booking-email">
@@ -69,8 +73,7 @@
 
             </form>
 
-            <!-- CODE VERIFICATION -->
-
+            <!-- VERIFICATION FORM -->
             <form id="verification-form" hidden>
 
                 <h2>Verify Your Email</h2>
@@ -97,17 +100,17 @@
 
                 <button type="submit"
                         class="bookings-button">
-                    Verify & View Bookings
+                    Verify &amp; View Bookings
                 </button>
 
             </form>
 
+            <!-- STATUS MESSAGES -->
             <p id="verification-message"
                role="status"
                aria-live="polite"></p>
 
             <!-- BOOKING HISTORY -->
-
             <section id="booking-history" hidden>
 
                 <h2>Your Bookings</h2>
