@@ -1,0 +1,483 @@
+
+/* =====================================
+   BIRTHDAY PACKAGES PAGE
+===================================== */
+
+.birthday-page {
+    min-height: 100vh;
+
+    background-image: url("images/event-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 60px 25px 100px;
+}
+
+
+/* =====================================
+   PAGE INTRODUCTION
+===================================== */
+
+.birthday-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.birthday-label {
+    font-family: Georgia, serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #a38146;
+    margin-bottom: 15px;
+}
+
+.birthday-intro h1 {
+    font-family: Georgia, serif;
+    font-size: 52px;
+    font-weight: normal;
+    color: #29241f;
+    margin: 15px 0;
+}
+
+.birthday-description {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    color: #6d5841;
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   FEATURED PACKAGE LAYOUT
+===================================== */
+
+.birthday-package {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 45px;
+
+    max-width: 1250px;
+    margin: 0 auto;
+
+    align-items: start;
+
+    background: rgba(255, 253, 248, 0.88);
+
+    padding: 35px;
+
+    border: 1px solid #d7c4a1;
+    border-radius: 8px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =====================================
+   PACKAGE PREVIEW
+===================================== */
+
+.package-preview {
+    width: 100%;
+}
+
+/* Container for all image layers */
+.birthday-preview-stage {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 1536 / 1024;
+
+    background-color: #f5f0e8;
+
+    border: 1px solid #d7c4a1;
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+/* Layer 1: Balloon and flower arrangement */
+.birthday-preview-stage .birthday-arrangement-layer {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    display: block;
+
+    border: none;
+    border-radius: 0;
+}
+
+
+/* =====================================
+   PACKAGE INFORMATION
+===================================== */
+
+.package-details {
+    padding: 10px 5px;
+}
+
+.package-label {
+    font-family: Georgia, serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #a38146;
+    margin-bottom: 15px;
+}
+
+.package-details h2 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 1.25;
+    color: #29241f;
+    margin-bottom: 20px;
+}
+
+.gold-divider {
+    width: 65px;
+    height: 2px;
+    background-color: #c6a15b;
+    margin-bottom: 25px;
+}
+
+.package-description {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #6d5841;
+    margin-bottom: 18px;
+}
+
+
+/* =====================================
+   PACKAGE FEATURES
+===================================== */
+
+.package-features {
+    margin-top: 30px;
+}
+
+.package-features h3,
+.package-customization h3 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    font-weight: normal;
+    color: #29241f;
+    margin-bottom: 15px;
+}
+
+.package-features ul {
+    padding-left: 22px;
+    margin: 0;
+}
+
+.package-features li {
+    font-family: Georgia, serif;
+    font-size: 15px;
+    color: #6d5841;
+    line-height: 2;
+}
+
+
+/* =====================================
+   CUSTOMIZATION SECTION
+===================================== */
+
+.package-customization {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #d7c4a1;
+}
+
+.package-customization p {
+    font-family: Georgia, serif;
+    font-size: 15px;
+    color: #6d5841;
+    line-height: 1.8;
+}
+
+.customization-note {
+    font-style: italic;
+    color: #a38146 !important;
+    margin-top: 15px;
+}
+
+/* =====================================
+   BIRTHDAY CUSTOMIZATION PANEL
+===================================== */
+
+.package-customization {
+    margin-top: 30px;
+    padding: 0;
+    border: 1px solid #d7b78b;
+    border-radius: 9px;
+    overflow: hidden;
+    background: #fffaf4;
+}
+
+.package-customization h3 {
+    margin: 0;
+    padding: 10px 15px;
+    background: #f0dfcb;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.customization-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 15px;
+}
+
+.customization-column + .customization-column {
+    border-left: 1px solid #e2cfb8;
+    padding-left: 15px;
+}
+
+.customization-column h4 {
+    margin: 0 0 10px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    color: #30261e;
+}
+
+.palette-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.palette-option {
+    min-width: 0;
+    padding: 10px 4px;
+    border: 1px solid #e4d7c7;
+    border-radius: 8px;
+    background: #f9f3ed;
+    cursor: pointer;
+    font-family: Georgia, serif;
+    font-size: 11px;
+    color: #3c3028;
+}
+
+.palette-option.selected {
+    border: 2px solid #c69b50;
+    background: #fff5e6;
+}
+
+.palette-dots {
+    position: relative;
+    display: block;
+    height: 39px;
+    margin-bottom: 8px;
+}
+
+.palette-dots i {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    box-shadow: inset -5px -5px 8px rgba(0,0,0,.15);
+}
+
+.palette-dots i:nth-child(1) {
+    left: calc(50% - 25px);
+    top: 0;
+}
+
+.palette-dots i:nth-child(2) {
+    left: calc(50% - 5px);
+    top: 4px;
+}
+
+.palette-dots i:nth-child(3) {
+    left: calc(50% - 15px);
+    top: 12px;
+}
+
+.palette-dots.purple i:nth-child(1) { background: #8d62b3; }
+.palette-dots.purple i:nth-child(2) { background: #d5b3ec; }
+.palette-dots.purple i:nth-child(3) { background: #eee5f5; }
+
+.palette-dots.pink i:nth-child(1) { background: #e8a6b6; }
+.palette-dots.pink i:nth-child(2) { background: #f4d3d7; }
+.palette-dots.pink i:nth-child(3) { background: #c69b50; }
+
+.palette-dots.blue i:nth-child(1) { background: #86b5d5; }
+.palette-dots.blue i:nth-child(2) { background: #d2e5f2; }
+.palette-dots.blue i:nth-child(3) { background: #c5c8ce; }
+
+.palette-dots.sage i:nth-child(1) { background: #9ba985; }
+.palette-dots.sage i:nth-child(2) { background: #d9dfcb; }
+.palette-dots.sage i:nth-child(3) { background: #f5ead9; }
+
+.birthday-number-input,
+.easel-message-input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #d8c4ac;
+    border-radius: 5px;
+    background: #fffaf5;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    color: #30261e;
+}
+
+.customization-hint {
+    font-size: 11px !important;
+    margin: -8px 0 14px;
+}
+
+.easel-upload-area {
+    border: 1px dashed #cbb497;
+    border-radius: 6px;
+    background: #fbf5ed;
+    padding: 17px 8px;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.easel-upload-area .upload-icon {
+    display: block;
+    font-size: 26px;
+    color: #9e7843;
+}
+
+.easel-upload-area p {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.easel-upload-area small {
+    color: #87715e;
+    font-size: 10px;
+}
+
+.event-date-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 11px;
+    border: 1px solid #d8c4ac;
+    border-radius: 5px;
+    color: #66503b;
+    font-size: 12px;
+}
+
+.birthday-review-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    width: calc(100% - 30px);
+    margin: 12px 15px 16px;
+    padding: 16px;
+    background: linear-gradient(120deg, #d5ac65, #a97930);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    .customization-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .customization-column + .customization-column {
+        border-left: none;
+        border-top: 1px solid #e2cfb8;
+        padding-left: 0;
+        padding-top: 15px;
+    }
+}
+
+/* =====================================
+   EASEL PREVIEW
+===================================== */
+
+.easel-preview {
+    margin-top: 20px;
+}
+
+.easel-preview h3 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: normal;
+    color: #29241f;
+    margin-bottom: 12px;
+}
+
+.easel-preview-stage {
+    min-height: 180px;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f5f0e8;
+    border: 1px solid #d7c4a1;
+    border-radius: 8px;
+}
+
+.easel-preview-stage p {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    color: #9a8060;
+    text-align: center;
+}
+
+
+/* =====================================
+   RESPONSIVE LAYOUT
+===================================== */
+
+@media (max-width: 900px) {
+
+    .birthday-package {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .birthday-intro h1 {
+        font-size: 40px;
+    }
+
+    .package-details h2 {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .birthday-page {
+        padding: 40px 15px 70px;
+    }
+
+    .birthday-package {
+        padding: 20px;
+    }
+
+    .birthday-intro h1 {
+        font-size: 34px;
+    }
+
+}

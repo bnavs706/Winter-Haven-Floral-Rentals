@@ -9,7 +9,17 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background: #111111;
+    background:
+        linear-gradient(
+            rgba(247, 243, 235, 0.92),
+            rgba(247, 243, 235, 0.92)
+        ),
+        url("images/floral-background.png");
+
+    background-size: cover;
+    background-position: center;
+
+    color: #1a1a1a;
 }
 
 /* Main ivory card */
