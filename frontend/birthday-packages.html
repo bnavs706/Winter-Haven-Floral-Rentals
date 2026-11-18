@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Packages | Haven Floral Rentals</title>
+
+    <!-- Main website styling -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Birthday Packages styling -->
+    <link rel="stylesheet" href="birthday-packages.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Haven Floral Rentals">
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="event.html" class="active">Event</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="my-bookings.html">My Bookings</a>
+        </nav>
+    </header>
+
+
+    <!-- =========================
+         BIRTHDAY PACKAGES PAGE
+    ========================= -->
+
+    <main class="birthday-page">
+
+        <!-- Page introduction -->
+        <section class="birthday-intro">
+
+            <p class="birthday-label">HAVEN FLORAL RENTALS</p>
+
+            <h1>Birthday Packages</h1>
+
+            <p class="birthday-description">
+                Celebrate your special moments with a
+                personalized design made just for you.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             FEATURED BIRTHDAY PACKAGE
+        ========================= -->
+
+        <section class="birthday-package">
+
+            <!-- LEFT: LIVE PACKAGE PREVIEW -->
+            <div class="package-preview">
+
+                <div class="birthday-preview-stage">
+
+                    <!-- Layer 1: Balloon and Flower Arrangement -->
+                    <img
+                        src="images/birthday-purple-arrangement.png"
+                        alt="Purple balloon and floral arrangement"
+                        class="birthday-arrangement-layer"
+                    >
+
+                    <!-- Layer 2: Number balloons (coming next) -->
+
+                    <!-- Layer 3: Personalized easel (coming next) -->
+
+                </div>
+                <div class="easel-preview">
+
+                <h3>Personalized Easel Preview</h3>
+
+                <div class="easel-preview-stage">
+
+                 <!-- Easel image will be added here -->
+                 <p>Your personalized easel will appear here.</p>
+
+                </div>
+
+                </div>        
+                                            
+            </div>
+
+
+            <!-- RIGHT: PACKAGE INFORMATION -->
+            <div class="package-details">
+
+                <p class="package-label">
+                    SIGNATURE COLLECTION
+                </p>
+
+                <h2>The Signature Birthday Backdrop</h2>
+
+                <div class="gold-divider"></div>
+
+                <p class="package-description">
+                    Make your birthday celebration unforgettable
+                    with an elegant backdrop featuring beautiful
+                    floral arrangements and balloon columns.
+                </p>
+
+                <p class="package-description">
+                    Personalize your celebration with matching
+                    balloon colors, birthday numbers, and a
+                    customized easel.
+                </p>
+
+
+                <!-- Package Features -->
+                <div class="package-features">
+
+                    <h3>Package Includes</h3>
+
+                    <ul>
+                        <li>Balloon and floral arrangement</li>
+                        <li>Choice of matching color palettes</li>
+                        <li>Optional birthday number balloons</li>
+                        <li>Personalized easel</li>
+                        <li>Setup and breakdown</li>
+                    </ul>
+
+                </div>
+
+
+                <!-- Customization Section -->
+                <div class="package-customization">
+
+                   <h3>Customize Your Package</h3>
+
+    <div class="customization-grid">
+
+        <!-- LEFT: BALLOON COLORS AND NUMBERS -->
+        <div class="customization-column">
+
+            <h4>Balloon & Flower Color Palette</h4>
+
+            <div class="palette-options">
+
+                <button type="button" class="palette-option selected">
+                    <span class="palette-dots purple">
+                        <i></i><i></i><i></i>
+                    </span>
+                    <span>Purple Luxe</span>
+                </button>
+
+                <button type="button" class="palette-option">
+                    <span class="palette-dots pink">
+                        <i></i><i></i><i></i>
+                    </span>
+                    <span>Blush & Gold</span>
+                </button>
+
+                <button type="button" class="palette-option">
+                    <span class="palette-dots blue">
+                        <i></i><i></i><i></i>
+                    </span>
+                    <span>Blue & Silver</span>
+                </button>
+
+                <button type="button" class="palette-option">
+                    <span class="palette-dots sage">
+                        <i></i><i></i><i></i>
+                    </span>
+                    <span>Sage & Cream</span>
+                </button>
+
+            </div>
+
+            <h4>Birthday Number Balloons (Optional)</h4>
+
+            <input
+                type="text"
+                class="birthday-number-input"
+                placeholder="e.g. 13, 21, 50"
+                maxlength="3"
+            >
+
+        </div>
+
+
+        <!-- RIGHT: EASEL AND DATE -->
+        <div class="customization-column">
+
+            <h4>Easel Message</h4>
+
+            <input
+                type="text"
+                class="easel-message-input"
+                placeholder="Happy Birthday!"
+                maxlength="40"
+            >
+
+            <p class="customization-hint">
+                Personalize your easel with a message.
+            </p>
+
+            <h4>Or Upload a Custom Picture</h4>
+
+            <div class="easel-upload-area">
+                <span class="upload-icon">↑</span>
+                <p>Drag & drop an image here</p>
+                <small>PNG or JPG (Max 10 MB)</small>
+            </div>
+
+            <h4>Event Date</h4>
+
+            <div class="event-date-display">
+                <span id="birthday-selected-date">
+                    Date selected during booking
+                </span>
+                <span>▦</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <button type="button" class="birthday-review-button">
+        CONTINUE TO REVIEW
+        <span>→</span>
+    </button>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
