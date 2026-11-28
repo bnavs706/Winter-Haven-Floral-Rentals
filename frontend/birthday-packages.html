@@ -8,10 +8,7 @@
 
     <title>Birthday Packages | Haven Floral Rentals</title>
 
-    <!-- Main website styling -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Birthday Packages styling -->
     <link rel="stylesheet" href="birthday-packages.css">
 </head>
 
@@ -37,13 +34,12 @@
     </header>
 
 
-    <!-- =========================
-         BIRTHDAY PACKAGES PAGE
-    ========================= -->
-
     <main class="birthday-page">
 
-        <!-- Page introduction -->
+        <!-- =========================
+             PAGE INTRODUCTION
+        ========================= -->
+
         <section class="birthday-intro">
 
             <p class="birthday-label">HAVEN FLORAL RENTALS</p>
@@ -58,46 +54,51 @@
         </section>
 
 
-        <!-- =========================
-             FEATURED BIRTHDAY PACKAGE
-        ========================= -->
-
         <section class="birthday-package">
 
-            <!-- LEFT: LIVE PACKAGE PREVIEW -->
+            <!-- =========================
+                 LEFT SIDE: LIVE PREVIEWS
+            ========================= -->
+
             <div class="package-preview">
 
+                <!-- Balloon and Flower Preview -->
                 <div class="birthday-preview-stage">
 
-                    <!-- Layer 1: Balloon and Flower Arrangement -->
+                    <!-- Arrangement Layer -->
                     <img
                         src="images/birthday-purple-arrangement.png"
-                        alt="Purple balloon and floral arrangement"
+                        alt="Balloon and floral arrangement"
                         class="birthday-arrangement-layer"
+                        id="birthday-arrangement"
                     >
 
-                    <!-- Layer 2: Number balloons (coming next) -->
-
-                    <!-- Layer 3: Personalized easel (coming next) -->
+                    <!-- Number Balloon Layer -->
+                    <div id="birthday-number-layer"></div>
 
                 </div>
+
+
+                <!-- Easel Preview -->
                 <div class="easel-preview">
 
-                <h3>Personalized Easel Preview</h3>
+                    <h3>Personalized Easel Preview</h3>
 
-                <div class="easel-preview-stage">
+                    <div class="easel-preview-stage">
 
-                 <!-- Easel image will be added here -->
-                 <p>Your personalized easel will appear here.</p>
+                        <p>Your personalized easel will appear here.</p>
+
+                    </div>
 
                 </div>
 
-                </div>        
-                                            
             </div>
 
 
-            <!-- RIGHT: PACKAGE INFORMATION -->
+            <!-- =========================
+                 RIGHT SIDE: PACKAGE DETAILS
+            ========================= -->
+
             <div class="package-details">
 
                 <p class="package-label">
@@ -121,7 +122,7 @@
                 </p>
 
 
-                <!-- Package Features -->
+                <!-- Package Includes -->
                 <div class="package-features">
 
                     <h3>Package Includes</h3>
@@ -137,110 +138,192 @@
                 </div>
 
 
-                <!-- Customization Section -->
+                <!-- =========================
+                     CUSTOMIZATION PANEL
+                ========================= -->
+
                 <div class="package-customization">
 
-                   <h3>Customize Your Package</h3>
+                    <h3>Customize Your Package</h3>
 
-    <div class="customization-grid">
-
-        <!-- LEFT: BALLOON COLORS AND NUMBERS -->
-        <div class="customization-column">
-
-            <h4>Balloon & Flower Color Palette</h4>
-
-            <div class="palette-options">
-
-                <button type="button" class="palette-option selected">
-                    <span class="palette-dots purple">
-                        <i></i><i></i><i></i>
-                    </span>
-                    <span>Purple Luxe</span>
-                </button>
-
-                <button type="button" class="palette-option">
-                    <span class="palette-dots pink">
-                        <i></i><i></i><i></i>
-                    </span>
-                    <span>Blush & Gold</span>
-                </button>
-
-                <button type="button" class="palette-option">
-                    <span class="palette-dots blue">
-                        <i></i><i></i><i></i>
-                    </span>
-                    <span>Blue & Silver</span>
-                </button>
-
-                <button type="button" class="palette-option">
-                    <span class="palette-dots sage">
-                        <i></i><i></i><i></i>
-                    </span>
-                    <span>Sage & Cream</span>
-                </button>
-
-            </div>
-
-            <h4>Birthday Number Balloons (Optional)</h4>
-
-            <input
-                type="text"
-                class="birthday-number-input"
-                placeholder="e.g. 13, 21, 50"
-                maxlength="3"
-            >
-
-        </div>
+                    <div class="customization-grid">
 
 
-        <!-- RIGHT: EASEL AND DATE -->
-        <div class="customization-column">
+                        <!-- LEFT: PALETTES AND NUMBERS -->
+                        <div class="customization-column">
 
-            <h4>Easel Message</h4>
+                            <h4>Balloon & Flower Color Palette</h4>
 
-            <input
-                type="text"
-                class="easel-message-input"
-                placeholder="Happy Birthday!"
-                maxlength="40"
-            >
+                            <div class="palette-options">
 
-            <p class="customization-hint">
-                Personalize your easel with a message.
-            </p>
+                                <!-- Purple Palette -->
+                                <button
+                                    type="button"
+                                    class="palette-option selected"
+                                    data-palette="purple"
+                                >
 
-            <h4>Or Upload a Custom Picture</h4>
+                                    <span class="palette-dots purple">
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </span>
 
-            <div class="easel-upload-area">
-                <span class="upload-icon">↑</span>
-                <p>Drag & drop an image here</p>
-                <small>PNG or JPG (Max 10 MB)</small>
-            </div>
+                                    <span>Purple Luxe</span>
 
-            <h4>Event Date</h4>
+                                </button>
 
-            <div class="event-date-display">
-                <span id="birthday-selected-date">
-                    Date selected during booking
-                </span>
-                <span>▦</span>
-            </div>
 
-        </div>
+                                <!-- Pink Palette -->
+                                <button
+                                    type="button"
+                                    class="palette-option"
+                                    data-palette="pink"
+                                >
 
-    </div>
+                                    <span class="palette-dots pink">
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </span>
 
-    <button type="button" class="birthday-review-button">
-        CONTINUE TO REVIEW
-        <span>→</span>
-    </button>
+                                    <span>Blush & Gold</span>
 
+                                </button>
+
+
+                                <!-- Blue Palette -->
+                                <button
+                                    type="button"
+                                    class="palette-option"
+                                    data-palette="blue"
+                                >
+
+                                    <span class="palette-dots blue">
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </span>
+
+                                    <span>Blue & Silver</span>
+
+                                </button>
+
+
+                                <!-- Green Palette -->
+                                <button
+                                    type="button"
+                                    class="palette-option"
+                                    data-palette="green"
+                                >
+
+                                    <span class="palette-dots sage">
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </span>
+
+                                    <span>Sage & Cream</span>
+
+                                </button>
+
+                            </div>
+
+
+                            <!-- Birthday Number Input -->
+                            <h4>
+                                <label for="birthday-number">
+                                    Birthday Number Balloons (Optional)
+                                </label>
+                            </h4>
+
+                            <input
+                                type="text"
+                                id="birthday-number"
+                                class="birthday-number-input"
+                                placeholder="e.g. 13, 21, 50"
+                                inputmode="numeric"
+                                maxlength="3"
+                            >
+
+                        </div>
+
+
+                        <!-- RIGHT: EASEL AND DATE -->
+                        <div class="customization-column">
+
+                            <h4>
+                                <label for="easel-message">
+                                    Easel Message
+                                </label>
+                            </h4>
+
+                            <input
+                                type="text"
+                                id="easel-message"
+                                class="easel-message-input"
+                                placeholder="Happy Birthday!"
+                                maxlength="40"
+                            >
+
+                            <p class="customization-hint">
+                                Personalize your easel with a message.
+                            </p>
+
+
+                            <!-- Custom Picture Upload -->
+                            <h4>Or Upload a Custom Picture</h4>
+
+                            <div class="easel-upload-area">
+
+                                <span class="upload-icon">↑</span>
+
+                                <p>Drag & drop an image here</p>
+
+                                <small>PNG or JPG (Max 10 MB)</small>
+
+                            </div>
+
+
+                            <!-- Selected Event Date -->
+                            <h4>Event Date</h4>
+
+                            <div class="event-date-display">
+
+                                <span id="birthday-selected-date">
+                                    Date selected during booking
+                                </span>
+
+                                <span>▦</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Continue Button -->
+                    <button
+                        type="button"
+                        class="birthday-review-button"
+                        id="birthday-review-button"
+                    >
+                        CONTINUE TO REVIEW
+                        <span>→</span>
+                    </button>
+
+                </div>
 
             </div>
 
         </section>
 
     </main>
+
+
+    <!-- Birthday Package JavaScript -->
+    <script src="birthday-packages.js"></script>
 
 </body>
 </html>
